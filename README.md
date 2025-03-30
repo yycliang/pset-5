@@ -6,11 +6,16 @@ In the first part, we'll compare representations from two different representati
 For this part, we'll be working in `part1/representations.ipynb`.
 You should copy the `part1` directory into your Google Drive and then open `part1/representations.ipynb` in Google Colab to be able to use GPUs.
 
+### Submission Guidelines for Part 1
+
+The only deliverable for this problem is `part1/representations.py`.
+Please submit this file to Gradescope.
+
 ## Part 2: Diffusion Models
 
 In this part, we will be working in the four ipynb files in `part2/`, corresponding to each problem. Please submit an aggregated pdf file with answers to and figures generated in **all** problems, along with the four notebooks with your code and running outputs.
 
-### Submission Guideline for Part 2
+### Submission Guidelines for Part 2
 
 Please include your answer to all problems, including formulas, proofs, and the figures generated in each problem, excluding code. You are required to submit the (single) pdf and all (four) notebooks with your code and running outputs. Do not include code in the pdf file. 
 
