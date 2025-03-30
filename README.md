@@ -1,10 +1,15 @@
 # 6.8300 Problem Set #5: Representation Learning and Diffusion Models
 
+In this problem set, we'll (1) compare different strategies for representation learning and (2) do a deep-dive into diffusion models.
+Much of this problem set requires GPUs--we'll be using Google Colab for GPU access.
+To work on this problem set in Google Colab, copy the `pset-5` directory to your Google Drive.
+When working on a particular notebook, configure the notebook to use a GPU machine with `Runtime -> Change runtime type -> T4 GPU`.
+
 ## Part 1: Representation Learning
 
 In the first part, we'll compare representations from two different representation learning methods.
 For this part, we'll be working in `part1/representations.ipynb`.
-You should copy the `part1` directory into your Google Drive and then open `part1/representations.ipynb` in Google Colab to be able to use GPUs.
+To get started, open this notebook in Google Colab and follow the instructions there.
 
 ### Submission Guidelines for Part 1
 
