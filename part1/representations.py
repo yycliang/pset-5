@@ -141,7 +141,7 @@ def get_features(
     num_workers: int = 4,
     device: str = "cuda:0",
 ):
-    """Get the features for the given split.
+    """Get the features for the given split. Hint: use torch.no_grad() to disable gradient computation.
 
     Args:
         split_name: The name of the split to get features from.
@@ -198,23 +198,23 @@ def train_linear_probe(
     """Train a linear probe on the training split of the fruit dataset. This should use the Adam optimizer (with hyperparameters as specified in the default arguments).
 
     Args:
-        features_dataset: A FeaturesDataset object.
+        features_dataset: A FeaturesDataset object to train on.
         num_epochs: The number of epochs to train for.
         batch_size: The batch size to use for training.
         learning_rate: The learning rate to use for training.
         weight_decay: The weight decay to use for training.
-        num_workers: The number of workers to use for training.
+        num_workers: The number of workers to use for data loading.
         device: The device to use for training.
 
     Returns:
-        linear_probe: A torch.nn.Module object representing the trained linear probe.
+        linear_probe: A torch.nn.Linear object representing the trained linear probe.
         epoch_losses: A list of length num_epochs containing the average loss over each epoch.
     """
     linear_probe = None
     epoch_losses = []
 
     ### YOUR CODE STARTS HERE ###
-
+    
     ### YOUR CODE ENDS HERE ###
 
     return linear_probe, epoch_losses
@@ -264,7 +264,7 @@ def find_nearest_neighbors(
         features: A numpy array of shape (num_examples, num_features) containing the features in which to find the nearest neighbors.
 
     Returns:
-        indices: A numpy array of shape (k,) containing the indices of the k nearest neighbors of the query features in the features tensor.
+        indices: A numpy array of shape (k,) containing the indices of the k nearest neighbors of the query features in the features array.
         similarities: A numpy array of shape (k,) containing the similarities between the query features and the nearest neighbors.
     """
     indices = None

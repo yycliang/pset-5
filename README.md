@@ -5,6 +5,18 @@ Much of this problem set requires GPUs--we'll be using Google Colab for GPU acce
 To work on this problem set in Google Colab, copy the `pset-5` directory to your Google Drive.
 When working on a particular notebook, configure the notebook to use a GPU machine with `Runtime -> Change runtime type -> T4 GPU`.
 
+## Grading
+
+Part 1: Representation learning
+ - 20 points
+
+Part 2: Diffusion models
+ - Problem 1: 15 points
+ - Problem 2: 25 points
+ - Problem 3: 25 points
+ - Problem 4: 15 points
+
+
 ## Part 1: Representation Learning
 
 In the first part, we'll compare representations from two different representation learning methods.
