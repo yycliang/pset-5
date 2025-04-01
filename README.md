@@ -1,9 +1,12 @@
 # 6.8300 Problem Set #5: Representation Learning and Diffusion Models
 
-In this problem set, we'll (1) compare different strategies for representation learning and (2) do a deep-dive into diffusion models.
-Much of this problem set requires GPUs--we'll be using Google Colab for GPU access.
-To work on this problem set in Google Colab, copy the `pset-5` directory to your Google Drive.
-When working on a particular notebook, configure the notebook to use a GPU machine with `Runtime -> Change runtime type -> T4 GPU`.
+In this problem set, we will
+1. compare different strategies for representation learning and
+2. do a deep-dive into diffusion models.
+
+Note that much of this problem set requires GPUs.
+- Feel free to use your own GPU if you have access to one.
+- To work on this problem set using GPUs in Google Colab, copy the `pset-5` directory to your Google Drive. When working on a particular notebook, configure the notebook to use a GPU machine with `Runtime → Change runtime type → T4 GPU`.
 
 
 **Important**: Resources on Google Colab are limited! If you use the GPUs for too long (e.g., several hours), they may restrict your GPU access for a while. To avoid issues, please start this assignment early and close the notebook when you're not actively using it. You're also welcome to use your own GPUs.
@@ -33,13 +36,13 @@ Please submit this file to Gradescope.
 
 ## Part 2: Diffusion Models
 
-In this part, we will be working in the four ipynb files in `part2/`, corresponding to each problem. Please submit an aggregated pdf file with answers to and figures generated in **all** problems, along with the four notebooks with your code and running outputs.
+In this part, we will be working in the four ipynb files in `part2/`, corresponding to each problem. Please submit an aggregated PDF file with answers to and figures generated in **_all_** problems, along with the four notebooks with your code and running outputs.
 
 ### Submission Guidelines for Part 2
 
-Please include your answer to all problems, including formulas, proofs, and the figures generated in each problem, excluding code. You are required to submit the (single) pdf and all (four) notebooks with your code and running outputs. Do not include code in the pdf file. 
+Please include your answer to all problems, including formulas, proofs, and the figures generated in each problem, excluding code. You are required to submit the (single) PDF and all (four) notebooks with your code and running outputs. Do not include code in the PDF file. 
 
-Specifically, the pdf should contain:
+Specifically, the PDF should contain:
 - Problem 1
   - Formulas and proofs for problem 1.1 and 1.2
   - 4 figures, one for each beta schedule for problem 1.3
