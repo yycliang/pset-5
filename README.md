@@ -5,6 +5,9 @@ Much of this problem set requires GPUs--we'll be using Google Colab for GPU acce
 To work on this problem set in Google Colab, copy the `pset-5` directory to your Google Drive.
 When working on a particular notebook, configure the notebook to use a GPU machine with `Runtime -> Change runtime type -> T4 GPU`.
 
+
+**Important**: Resources on Google Colab are limited! If you use the GPUs for too long (e.g., several hours), they may restrict your GPU access for a while. To avoid issues, please start this assignment early and close the notebook when you're not actively using it. You're also welcome to use your own GPUs.
+
 ## Grading
 
 Part 1: Representation learning
