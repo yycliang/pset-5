@@ -5,23 +5,10 @@ In this problem set, we will
 2. do a deep-dive into diffusion models.
 
 Note that much of this problem set requires GPUs.
-- Feel free to use your own GPU if you have access to one.
+- Feel free to use your own GPU(s) if you have access. If so, you'll need to install the requirements in `requirements.txt` in each of `part1` and `part2`.
 - To work on this problem set using GPUs in Google Colab, copy the `pset-5` directory to your Google Drive. When working on a particular notebook, configure the notebook to use a GPU machine with `Runtime → Change runtime type → T4 GPU`.
 
-
-**Important**: Resources on Google Colab are limited! If you use the GPUs for too long (e.g., several hours), they may restrict your GPU access for a while. To avoid issues, please start this assignment early and close the notebook when you're not actively using it. You're also welcome to use your own GPUs.
-
-## Grading
-
-Part 1: Representation learning
- - 20 points
-
-Part 2: Diffusion models
- - Problem 1: 15 points
- - Problem 2: 30 points
- - Problem 3: 20 points
- - Problem 4: 15 points
-
+**IMPORTANT**: Resources on Google Colab are limited! If you use the GPUs for too long (e.g., several hours), they may restrict your GPU access for a while. To avoid issues, please start this assignment early and close the notebook when you're not actively using it.
 
 ## Part 1: Representation Learning
 
@@ -57,7 +44,18 @@ Specifically, the PDF should contain:
   - The generated figures `results/sampling_comparison.png`
   - Answer to the short answer question about different samplers and number of steps
 
-### Acknowledgement
+## Grading
+
+Part 1: Representation learning
+ - 20 points
+
+Part 2: Diffusion models
+ - Problem 1: 15 points
+ - Problem 2: 30 points
+ - Problem 3: 20 points
+ - Problem 4: 15 points
+
+### Acknowledgements
 
 Parts of this pset were inspired by
 * Berkeley CS294-158, taught by Pieter Abbeel, Wilson Yan, Kevin Frans, and Philipp Wu;
