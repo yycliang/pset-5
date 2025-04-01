@@ -21,6 +21,7 @@ Specifically, the pdf should contain:
   - The generated figures `results/p2_train_plot.png` and `results/p2_toy_samples.png`
 - Problem 3: MNIST and conditional generation
   - The generated figures `results/mnist_train_plot.png` and `results/image_w{w}.png` (w=0.0, 0.5, 1.0, 2.0, 4.0)
+  - Answer to the short answer question about the U-Net architecture
   - Answer to the short answer question about different CFG weight $w$ in problem 3.2
 - Problem 4: Sampling from pre-trained models
   - The generated figures `results/sampling_comparison.png
