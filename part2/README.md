@@ -10,9 +10,9 @@ Each has its own notebook with more detailed instructions in the `part2` folder.
 
 ## Submission Guideline for Part 2
 
-Please include your answer to all problems, including formulas, proofs, and the figures generated in each problem, excluding code. You are required to submit the (single) pdf and all (four) notebooks with your code and running outputs. Do not include code in the pdf file. 
+Please include your answer to all problems, including formulas, proofs, and the figures generated in each problem, excluding code. You are required to submit the (single) PDF titled `part2.pdf` and all (four) notebooks with your code and running outputs. Do not include code in the PDF file. 
 
-Specifically, the pdf should contain:
+Specifically, the PDF should contain:
 - Problem 1: Preliminaries and variance schedules
   - Formulas and proofs for problem 1.1 and 1.2
   - 4 figures, one for each beta schedule for problem 1.3
