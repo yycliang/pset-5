@@ -18,8 +18,8 @@ Part 1: Representation learning
 
 Part 2: Diffusion models
  - Problem 1: 15 points
- - Problem 2: 25 points
- - Problem 3: 25 points
+ - Problem 2: 30 points
+ - Problem 3: 20 points
  - Problem 4: 15 points
 
 
