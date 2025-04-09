@@ -10,6 +10,7 @@ import zipfile
 import timm
 from timm.data import resolve_data_config
 from timm.data.transforms_factory import create_transform
+import torch.utils.data.dataloader
 from tqdm.auto import tqdm
 
 
@@ -160,6 +161,28 @@ def get_features(
     features = None
 
     ### YOUR CODE STARTS HERE ###
+    # set up the dataloader 
+    data_loader = torch.utils.data.DataLoader(
+        # using datast 
+        dataset,
+        batch_size=batch_size, 
+        shuffle=False, 
+        num_workers=num_workers, 
+        pin_memory=True,
+    )
+    ## initialize 
+    all_features = []
+
+    ## ## using nograd()
+    with torch.no_grad(): 
+        # using tqdm
+        for images, _ in tqdm(data_loader):
+            images = images.to(device)
+            features = feature_extractor(images)
+            features = features.cpu().numpy()
+            all_features.append(features)
+    ## use concantnce to get them together
+    features = np.concatenate(all_features, axis=0)
 
     ### YOUR CODE ENDS HERE ###
 
@@ -214,6 +237,50 @@ def train_linear_probe(
     epoch_losses = []
 
     ### YOUR CODE STARTS HERE ###
+    # set up linear probe
+    linear_probe = torch.nn.Linear(
+        features_dataset.features.shape[1], 
+        features_dataset.num_classes
+    ).to(device)
+    ## template frombefor
+    data_loader = torch.utils.data.DataLoader(
+        # using datast 
+        features_dataset,
+        batch_size=batch_size, 
+        shuffle=True, 
+        num_workers=num_workers, 
+        pin_memory=True,
+    )
+    ##optimizer 
+    optimizer = torch.optim.Adam(
+        linear_probe.parameters(), 
+        lr= learning_rate, 
+        weight_decay=weight_decay
+    )
+
+    criterion = torch.nn.CrossEntropyLoss()
+    ## go through the epochs 
+    for epoch in range(num_epochs): 
+        linear_probe.train()
+        ## loss     
+        current_loss = 0.0 
+        total_batches = 0 
+        ## intrat through the data loader 
+        for features, labels in data_loader:
+            features = torch.tensor(features, dtype=torch.float32).to(device)
+            labels = torch.tensor(labels, dtype=torch.long).to(device)
+            ## zero grad
+            optimizer.zero_grad()
+            outputs = linear_probe(features) 
+            loss = criterion(outputs, labels)
+            loss.backward()
+            optimizer.step()
+            ## now apepend to currnt
+            current_loss += loss.item()
+            total_batches +=1 
+        ## determine avgs
+        avg_loss = current_loss / total_batches
+        epoch_losses.append(avg_loss)
     
     ### YOUR CODE ENDS HERE ###
 
@@ -271,6 +338,16 @@ def find_nearest_neighbors(
     similarities = None
 
     ### YOUR CODE STARTS HERE ###
+
+    # take th vectors -> normalize 
+    query_norm = query_features / np.linalg.norm(query_features)
+    features_norm = features / np.linalg.norm(features, axis=1, keepdims=True)
+
+    ## find th cosine similairits 
+    similarities = np.dot(features_norm, query_norm)
+    ## now take th top k indicies that ar sortd by smilarity 
+    indices = np.argsort(similarities)[-k:][::-1] 
+    similarities = similarities[indices]
 
     ### YOUR CODE ENDS HERE ###
 
